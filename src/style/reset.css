@@ -1,0 +1,54 @@
+@charset "utf-8";
+/*
+ **************************************************************************
+ *                                                                        *
+ *  触屏版——腾讯客服官网reset样式                                                 *
+ *                                                                        *
+ *  @copyright       Copyright © 1998-2013 Tencent. All Rights Reserved.  *
+ *  @link            http://kf.qq.com/                                    *
+ *  @author          silenceWang                                          *
+ *  @version         1.0                                                  *
+ *  @lastmodify      2013.10.31                                            *
+ *                                                                        *
+ **************************************************************************
+*/
+
+
+/*========== reset ==========*/
+html,body,form,fieldset,p,div,h1,h2,h3,h4,h5,h6{-webkit-text-size-adjust:none;}
+body,div,input,footer,header{box-sizing: border-box;}
+body,h1,h2,h3,h4,h5,h6,p,ul,dl,ol{margin:0;}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, SimSun, sans-serif;
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+  /*-webkit-user-select: none;*/
+  -webkit-overflow-scrolling: touch
+}
+h1,h2,h3,h4,h5,h6,input,textarea,select,button,label{font-size:100%;vertical-align:middle;}
+ul,ol{padding-left:0;}
+ul,dl,ol{list-style:none;}
+img,fieldset{border:none;}
+img{display:inline-block;overflow:hidden;vertical-align:top;}
+em,address,i{font-style:normal;}
+sup,sub{vertical-align:baseline;}
+table{border-collapse:collapse;border-spacing:0;}
+q:before{content:"";}
+q:after{content:"";}
+textarea{word-wrap:break-word;resize:none;}
+article,aside,dialog,figure,footer,header,hgroup,nav,section{display:block;}
+menu{margin:0;padding:0;}
+mark{background-color:transparent;}
+body{font-family:"Helvetica Neue",Helvetica,Arial,Tahoma,sans-serif; min-height: 100%;}
+legend,button,select,textarea,input{color:#333;}
+button{cursor:pointer;}
+img{max-width:100%;height:auto;}
+select {-webkit-appearance:none;-webkit-border-radius:0px;background:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAoCAYAAAD+MdrbAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAGdJREFUeNrs1dEKwCAIBdCMfat+k1/raG8bLW/gHgZXsJf0VAQlEdEqo7fiIEiQIMGfgscYzAx+Zd1d0h1mRSh2O3JWjC7akSYUm17Ks3kHu2L8erNU1XibW6XwGyVIkCDBb8BTgAEACnVTobavwZYAAAAASUVORK5CYIIvKiAgfHhHdjAwfGVlMjQ0YTBkNjkwODFlNzdhNzlhMDUwOGY1M2EzMzg5ICov") no-repeat right;background-size:auto 100%;}
+input[type='text'] {-webkit-appearance:none;background:none;}
+button {-webkit-appearance:none;border:none;}/*  |xGv00|4d7d71f5dd9048bfa370212a335d67e1 */
+a:-webkit-any-link{text-decoration:none;}
+a{color:#333;cursor:pointer;text-decoration:none;}
+img[src=""]{opacity:0;}

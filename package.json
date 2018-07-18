@@ -13,12 +13,14 @@
     "axios": "^0.18.0",
     "element-ui": "^2.4.3",
     "font-awesome": "^4.7.0",
+    "mockjs": "^1.0.1-beta3",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1",
     "vuex": "^3.0.1"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
+    "axios-mock-adapter": "^1.15.0",
     "babel-core": "^6.22.1",
     "babel-helper-vue-jsx-merge-props": "^2.0.3",
     "babel-loader": "^7.1.1",
