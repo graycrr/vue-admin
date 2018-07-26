@@ -11,7 +11,7 @@ import Mock from './mock'
 Mock.start();
 // import store from './store/index'
 
-Vue.prototype.$axios = Axios
+// Vue.prototype.$axios = Axios
 
 Vue.use(ElementUI)
 

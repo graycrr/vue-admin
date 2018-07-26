@@ -4,10 +4,12 @@ import { LoginUsers, Users } from './data/user'
 let _Users = Users;
 
 export default {
-    start() {
-        let mock = new MockAdapter(axios);
+    start() { //初始化函数
+        let mock = new MockAdapter(axios); // 创建 MockAdapter 实例
 
-        // reply的参数为 (status, data, headers) 
+        // reply的参数为 (status, data, headers)
+        // configt指前台传过来的数据 
+        // resolve([状态值，{返回的数据}])
         // mock success request
         mock.onGet('/success').reply(200, {
             msg: 'success'

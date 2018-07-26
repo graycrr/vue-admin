@@ -15,9 +15,7 @@
     </div>
 </template>
 <script>
-import axios from 'axios';
-import MockAdapter from 'axios-mock-adapter'
-var mock = new MockAdapter(axios);
+import { Login } from '@/api/api'
 export default {
     data () {
         return {
@@ -39,13 +37,15 @@ export default {
         handleSubmit() {
             this.$refs.form2.validate(valid => {
                 if(valid) {
-                    axios.post('/login',this.form2).then(res => {
-                        let { msg, code } = res.data;
+                    let para = { username: this.form2.username, password: this.form2.password }
+                    Login(para).then(res => {
+                        let { msg, code } = res;
                         console.log(msg, code)
                         if(code !== 200 ) {
                             this.$message.error(msg)
                         } else {
-                            this.$message.success(msg)
+                            this.$message.success(msg);
+                            this.$router.push({ path: '/'})
                         }
                     })
                 } else {
