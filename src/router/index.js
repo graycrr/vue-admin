@@ -4,6 +4,7 @@ import HelloWorld from '@/components/HelloWorld'
 // import Login from '@/pages/login/login'
 const Login = () => import ('@/pages/login/login');
 const Home = () => import ('@/pages/home/home');
+const User = () => import ('@/pages/user/user');
 
 Vue.use(Router)
 
@@ -12,12 +13,18 @@ export default new Router({
     {
       path: '/login',
       name: 'Login',
-      component: Login
+      component: Login,
+      hidden: true
     },
     {
       path: '/',
-      name: 'Home',
-      component: Home
-    }
+      name: '',
+      component: Home,
+      iconCls: 'fa fa-users',
+      leaf: true,
+      children: [
+        { path: '/user', component: User, name: '用户管理' }
+      ]
+    },
   ]
 })

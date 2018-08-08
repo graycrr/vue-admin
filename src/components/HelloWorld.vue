@@ -1,8 +1,12 @@
 <template>
   <div class="hello">
+    <el-pagination
+      small
+      layout="prev, pager, next"
+      :total="50">
+    </el-pagination>
     <h1>{{ msg }}</h1>
     <h2>Essential Links</h2>
-    <el-button>测试</el-button>
     <ul>
       <li>
         <a
@@ -86,53 +90,18 @@
 
 <script>
 export default {
-  name: "HelloWorld",
-  data() {
+  name: 'HelloWorld',
+  data () {
     return {
-      aa: true,
-      msg: "Welcome to Your Vue.js App"
-    };
-  },
-  methods: {
-    testget() {
-      this.$axios
-        .get(`/api/admin/v0/trans_tasks/`, {
-          params: {
-            page: 2
-          }
-        })
-        .then(res => {
-          console.log(res);
-        })
-        .catch(err => {
-          console.log(err);
-        });
-    },
-    testpost() {
-      let id = 92;
-      this.$axios
-        .put(`/api/admin/v0/my_info/`, {
-          username: "admin"
-        })
-        .then(res => {
-          console.log(res);
-        })
-        .catch(err => {
-          console.log(err);
-        });
+      msg: 'Welcome to Your Vue.js App'
     }
-  },
-  mounted() {
-    this.testget();
-    this.testpost();
   }
-};
+}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h1,
-h2 {
+h1, h2 {
   font-weight: normal;
 }
 ul {

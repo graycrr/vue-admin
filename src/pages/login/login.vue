@@ -15,8 +15,10 @@
     </div>
 </template>
 <script>
-import { Login } from '@/api/api'
+import { Login } from '../../api/api'
+import mixin from '../../utils/mixin'
 export default {
+  mixins: [mixin],
     data () {
         return {
             form2: {
@@ -37,15 +39,15 @@ export default {
         handleSubmit() {
             this.$refs.form2.validate(valid => {
                 if(valid) {
-                    let para = { username: this.form2.username, password: this.form2.password }
+                    let para = { username: this.form2.username, password: this.form2.password };
                     Login(para).then(res => {
-                        let { msg, code } = res;
-                        console.log(msg, code)
+                        let { msg, code, user } = res;
                         if(code !== 200 ) {
                             this.$message.error(msg)
                         } else {
                             this.$message.success(msg);
-                            this.$router.push({ path: '/'})
+                            sessionStorage.setItem('username',JSON.stringify(this.form2.username));
+                            this.$router.push({ path: '/user'});
                         }
                     })
                 } else {
@@ -61,6 +63,7 @@ export default {
        width: 100%;
        height: 100%;
        display: flex;
+       flex-direction: column;
        justify-content: center;
        align-items: center;
     }

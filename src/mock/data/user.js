@@ -4,13 +4,17 @@ const LoginUsers = [
         id: 1,
         username: 'admin',
         password: '123456',
-        name: '某某某'
+        name: '某某某',
+        telephone: 123456,
+        email: '',
     },
     {
         id: 2,
         username: 'crr',
         password: '123456',
-        name: '陈某某'
+        name: '陈某某',
+        telephone: 456454546,
+        email: '',
 
     }
 ]
@@ -24,7 +28,7 @@ for(let i = 0; i < 90; i++){
         addr: Mock.mock('@county(true)'), // @county(true)为数据模板
         'age|18-60': 1, // 'age|18-60': 1 为数据模板
         birth: Mock.Random.date(), // 随机生成日期
-        sex: Mock.Random.integer(0, 1), // 随机生成整数, min:0, max1,
+        sex: Mock.Random.integer(1, 2), // 随机生成整数, min:0, max1,
     }));
 }
 

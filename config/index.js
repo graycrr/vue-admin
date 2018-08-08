@@ -6,7 +6,6 @@ const path = require('path')
 
 module.exports = {
   dev: {
-
     // Paths
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
@@ -16,7 +15,7 @@ module.exports = {
         changeOrigin: true, // 如果为true,本地会虚拟一个服务端接收你的请求并代替你发送该请求
         secure: false,
         // pathRewrite: {
-        //    '^/api': '' // 在真正请求的时候去掉/api标识
+        //   '^/api': '' // 在真正请求的时候去掉/api标识
         // }
       },
     },
@@ -29,7 +28,7 @@ module.exports = {
     notifyOnErrors: true,
     poll: false, // https://webpack.js.org/configuration/dev-server/#devserver-watchoptions-
 
-    
+
     /**
      * Source Maps
      */
