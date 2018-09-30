@@ -1,12 +1,12 @@
 <template>
     <div class="login">
         <el-form :model="form2" :rules="rules2" ref="form2" label-width="0" class="login2">
-            <h1>登录</h1>
+            <h1 style="font-size: 25px; margin-bottom: 30px">后台管理系统</h1>
             <el-form-item prop="username">
-                <el-input type="text" prefix-icon="fa fa-user" v-model="form2.username" placeholder="账号" clearable></el-input>
+              <el-input type="text" prefix-icon="fa fa-user" v-model="form2.username" placeholder="账号:admin" clearable></el-input>
             </el-form-item>
             <el-form-item prop="password">
-                <el-input type="text" prefix-icon="fa fa-unlock-alt" v-model="form2.password" placeholder="密码" clearable></el-input>
+              <el-input type="password" prefix-icon="fa fa-unlock-alt" v-model="form2.password" placeholder="密码:123456" clearable></el-input>
             </el-form-item>
             <el-form-item>
                 <el-button type="primary" @click.native.prevent="handleSubmit">登录</el-button>
@@ -68,8 +68,14 @@ export default {
        align-items: center;
     }
     .login2 {
-        height: 100%;
-        width: 60%;
+        height: 320px;
+        width: 400px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid #e4e7ed;
+        border-radius: 15px;
     }
 </style>
 

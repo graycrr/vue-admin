@@ -179,7 +179,6 @@
         };
         this.$store.dispatch('tableLoading');
         getUserList(para).then((res) => {
-          console.log(res)
           this.total = res.data.count;
           this.current = res.data.current;
           this.tableContent = res.data.users;

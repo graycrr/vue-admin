@@ -6,6 +6,7 @@ const Login = () => import ('@/pages/login/login');
 const Home = () => import ('@/pages/home/home');
 const User = () => import ('@/pages/user/user');
 const Chart = () => import ('@/pages/echart/echart');
+const Test = () => import ('@/pages/test/test');
 
 Vue.use(Router)
 
@@ -29,12 +30,12 @@ export default new Router({
     },
     {
       path: '/',
-      name: '',
+      name: '图表管理',
       component: Home,
       iconCls: 'fa fa-users',
-      leaf: true,
       children: [
-        { path: '/echart', component: Chart, name: '图标管理' }
+        { path: '/echart', component: Chart, name: '图表管理' },
+        { path: '/test', component: Test, name: '测试' }
       ]
     },
   ]
